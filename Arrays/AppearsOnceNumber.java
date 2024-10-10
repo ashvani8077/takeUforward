@@ -7,24 +7,27 @@ public class AppearsOnceNumber {
         int arr[]={1,1,2,3,3,4,4};
         System.out.println(onceBrute(arr));
         System.out.println(onceBetter(arr));
+        System.out.println(onceOptimal(arr));
 
     }
 
-    public static int onceBrute(int arr[]){
-        for(int i=0;i<arr.length;i++){
-            int num=arr[i];
-            int counter=0;
-            for (int j=0;j<arr.length;j++){
-                if(arr[j]==num){
-                    counter=1;
+    public static int onceBrute(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            int num = arr[i];
+            int counter = 0;
+
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[j] == num) {
+                    counter++;
                 }
             }
-            if(counter==1){
+            if (counter == 1) {
                 return num;
             }
         }
         return -1;
     }
+
 
 
     public static int onceBetter(int arr[]){
@@ -43,7 +46,11 @@ public class AppearsOnceNumber {
 
 
     public static int onceOptimal(int arr[]){
-
+        int xor=0;
+        for (int i=0;i<arr.length;i++){
+            xor=xor^arr[i];
+        }
+        return xor;
     }
 }
 
@@ -59,3 +66,9 @@ public class AppearsOnceNumber {
 //    Better--->>
 //        Use Hash
 //        Time COmplexity=O(2n)
+
+
+
+//    Optimal
+//        use XOR operator
+//        Time Complexity=

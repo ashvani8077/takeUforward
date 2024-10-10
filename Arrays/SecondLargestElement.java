@@ -53,6 +53,9 @@ public class SecondLargestElement {
                 secondLargest=largest;
                 largest=arr[i];
             }
+            if(arr[i]>secondLargest&&arr[i]<largest){
+                secondLargest=arr[i];
+            }
         }
 
         return secondLargest;
