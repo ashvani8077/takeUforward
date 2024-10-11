@@ -48,19 +48,15 @@ public class LongestSubarray {
 
     public static int subarraybetter(int arr[],int key){
         int n = arr.length; // size of the array.
-
         HashMap<Long, Integer> preSumMap = new HashMap<>();
         long sum = 0;
         int maxLen = 0;
         for (int i = 0; i < n; i++) {
             sum += arr[i];
-
             if (sum == key) {
                 maxLen = Math.max(maxLen, i + 1);
             }
-
             long rem = sum - key;
-
             if (preSumMap.containsKey(rem)) {
                 int len = i - preSumMap.get(rem);
                 maxLen = Math.max(maxLen, len);
