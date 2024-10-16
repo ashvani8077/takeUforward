@@ -1,0 +1,27 @@
+We have 3 variable- low, mid, high
+Everything [0 to low-1]=    Extreme Left
+           [low to mid-1]=1
+           [mid to high]=Random Number 0/1/2
+           [high+1 to arr.length-1]=Extreme Right
+
+           so we have to any how sort the part from mid to high
+
+arr[]={0,1,1,0,1,2,1,2,0,0,0}
+
+
+arr[mid]==0
+            swap(arr[low], arr[mid])
+            mid++;
+            low++;
+
+
+arr[mid]==1
+             mid++
+
+
+arr[mid]==2
+            swap(arr[high],arr[mid])
+            high--;
+
+
+while(mid<high)
