@@ -1,10 +1,13 @@
 package Arrays;
 
 public class main {
-
     public static void main(String[] args) {
-        char c='f';
-        System.out.println(c);
-        System.out.println(c-0);
+        int a=5;
+        System.out.println(a);
+        int ans=answer(a);
+        System.out.println(ans);
+    }
+    public static int answer(int a){
+        return a+10;
     }
 }
