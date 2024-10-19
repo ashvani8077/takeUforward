@@ -1,0 +1,22 @@
+In this algorithm we have to first make two variable
+    int ele         --that will initially nothing store
+    int count       --count the frequency of that first element
+
+    the first element of array will be store in ele and count will become 1
+    then the next elements can be
+                equal to this element               -count ++
+                not equal to this element           -count --
+
+    while iterating in the array if the count will become 0 at the ith index then then new ele will be i+1;
+    and count will 1 and working same
+
+
+    after the iteration we have an element now in 2nd loop we have to check the counting of that element in that array
+    we initialize a variable count1 that will be 0 and if arr[i]==ele the count will be ++
+
+
+    in the end check if count1>n/2
+                                return ele;
+
+                    else
+                                return -1;
