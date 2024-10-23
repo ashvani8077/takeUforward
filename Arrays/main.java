@@ -1,13 +1,15 @@
 package Arrays;
+import java.util.*;
 
 public class main {
     public static void main(String[] args) {
-        int a=5;
-        System.out.println(a);
-        int ans=answer(a);
+        String ans="";
+        StringTokenizer st = new StringTokenizer("Let's my name is khan"," ");
+        while (st.hasMoreTokens()){
+            StringBuffer sb=new StringBuffer(st.nextToken());
+            sb.reverse();
+            ans=ans+" "+sb.toString();
+        }
         System.out.println(ans);
-    }
-    public static int answer(int a){
-        return a+10;
     }
 }
