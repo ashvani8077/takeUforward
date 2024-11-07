@@ -81,12 +81,12 @@ public class Insertion {
             return temp;
         }
         Node temp=head;
-        while (temp!=null){
+        while (temp.next!=null){
             if(temp.next.data==value){
                 Node nn=new Node(ele);
                 nn.next=temp.next;
                 temp.next=nn;
-                break;
+                return head;
             }
             temp=temp.next;
         }
