@@ -52,15 +52,6 @@ public class LongestConsecutiveSequence {
         }
         return longest;
     }
-
-
-    public static int solutionOptimal(int arr[]){
-        HashSet<Integer>hs=new HashSet<>();
-        for(int i=0;i<arr.length;i++){
-            hs.add(arr[i]);
-        }
-        int long=0
-    }
 }
 
 
