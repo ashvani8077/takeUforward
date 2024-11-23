@@ -46,6 +46,20 @@ public class RotateMatrix {
             }
         }
     }
+
+
+
+    public static int [][]rotate(int arr[][]){
+        int m=arr.length;
+        int n=arr[0].length;
+        int ans[][]=new int[m][n];
+        for(int i=0;i<m;i++){
+            for (int j=0;j<n;j++){
+                ans[i][j]=arr[m-j-1][i];
+            }
+        }
+        return ans;
+    }
 }
 
 
