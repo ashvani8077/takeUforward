@@ -7,12 +7,12 @@ public class MoveAllZero {
         int arr[]={1,0,2,3,2,0,0,4,5,1};
         //moveBrute(arr);
         for (int i:arr){
-            System.out.println(i);
+            System.out.print(i+" ");
         }
-        System.out.println("hello");
-        moveOptimal(arr);
+        moveBrute(arr);
+        System.out.println();
         for (int i:arr){
-            System.out.println(i);
+            System.out.print(i+" ");
         }
     }
     public static void moveBrute(int arr[]){
